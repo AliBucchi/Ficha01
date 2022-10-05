@@ -10,13 +10,13 @@ public class Exercicio1 {
 
         b = (int) a;
 
-        System.out.println("O valor em inteiros: " + b);
+        System.out.println("O valor em inteiros: " + b + "\n");
 
         int c = 9;
 
         double d = c;
 
-        System.out.println("O valor em reais: " + d);
+        System.out.println("O valor em reais: " + d + "\n");
 
         //Exercicio b (numero de digitos)
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +31,7 @@ public class Exercicio1 {
             xDigitos++;
         }
 
-        System.out.println("O numero de digitos é: " + xDigitos);
+        System.out.println("O numero de digitos é: " + xDigitos + "\n");
 
         //Exercicio c (arredondar a 2 casas decimais)
         aproximar2Digitos(4.78905, 4.7, 5.8954, 5);

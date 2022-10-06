@@ -1,5 +1,7 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Exercicio1 {
     public static void main(String[] args) {
@@ -19,12 +21,12 @@ public class Exercicio1 {
         System.out.println("O valor em reais: " + d + "\n");
 
         //Exercicio b (numero de digitos)
-        Scanner scanner = new Scanner(System.in);
+        Scanner ler = new Scanner(System.in);
         int x;
         int xDigitos = 1;
 
         System.out.println("Digite um numero: ");
-        x = scanner.nextInt();
+        x = ler.nextInt();
 
         while (x >= 10) {
             x /= 10;
@@ -38,6 +40,20 @@ public class Exercicio1 {
 
         // Exercicio d
         imprimirNumero (0.456789);
+
+        //Exercicio e (imprimir datas e horas em diferentes formas)
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        System.out.println(dtf.format(LocalDateTime.now()));
+
+        DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(dtf2.format(LocalDateTime.now()));
+
+        DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("dd/MM/yy");
+        System.out.println(dtf3.format(LocalDateTime.now()));
+
+        DateTimeFormatter dtf4 = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+        System.out.println(dtf4.format(LocalDateTime.now()));
     }
     public static void aproximar2Digitos(double valor1, double v1, double v, double valor) {
         System.out.println(new DecimalFormat("#,##0.00").format(valor1));
